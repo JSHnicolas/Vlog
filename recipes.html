@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JavaScript (for navbar toggle and carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+.recipe-card {
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+}
+
+.recipe-card img {
+  height: 150px;
+  object-fit: cover;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Foodie</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item d-flex flex-column flex-lg-row align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0">
+              <a href="login.html" class="btn btn-outline-primary btn-sm">Log In</a>
+              <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Recipes Section -->
+    <div class="container my-5 recipe-cards">
+      <div class="row g-4 justify-content-center">
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish1.jpg" class="card-img-top" alt="Biryani Rice">
+            <div class="card-body">
+              <h5 class="card-title">Biryani Rice</h5>
+              <p class="card-text">A delicious and aromatic Indian rice dish with spices and meat.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#biryaniModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish2.jpg" class="card-img-top" alt="Carbonara">
+            <div class="card-body">
+              <h5 class="card-title">Carbonara</h5>
+              <p class="card-text">Classic Italian pasta with creamy sauce, bacon, and parmesan cheese.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carbonaraModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish3.jpg" class="card-img-top" alt="Fried Chicken">
+            <div class="card-body">
+              <h5 class="card-title">Fried Chicken</h5>
+              <p class="card-text">Crispy, juicy, and perfectly seasoned chicken pieces.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#friedChickenModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish4.jpg" class="card-img-top" alt="Pancit">
+            <div class="card-body">
+              <h5 class="card-title">Pancit</h5>
+              <p class="card-text">A Filipino noodle dish served with vegetables and meat.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pancitModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish5.jpg" class="card-img-top" alt="Adobo">
+            <div class="card-body">
+              <h5 class="card-title">Adobo</h5>
+              <p class="card-text">A Filipino favorite made with chicken or pork simmered in vinegar and soy sauce.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adoboModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish6.webp" class="card-img-top" alt="Sinigang">
+            <div class="card-body">
+              <h5 class="card-title">Sinigang</h5>
+              <p class="card-text">A sour tamarind soup with pork and vegetables, a Filipino classic.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sinigangModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish7.webp" class="card-img-top" alt="Kare-Kare">
+            <div class="card-body">
+              <h5 class="card-title">Kare-Kare</h5>
+              <p class="card-text">A rich peanut stew with oxtail and vegetables, served with bagoong.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kareKareModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto d-flex justify-content-center mb-4">
+          <div class="card h-100">
+            <img src="dish8.jpg" class="card-img-top" alt="Lumpia">
+            <div class="card-body">
+              <h5 class="card-title">Lumpia</h5>
+              <p class="card-text">Crispy spring rolls filled with ground meat and vegetables.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lumpiaModal">View Recipe</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Biryani Rice Modal -->
+<div class="modal fade" id="biryaniModal" tabindex="-1" aria-labelledby="biryaniModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="biryaniModalLabel">Biryani Rice Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>2 cups basmati rice</li>
+            <li>500g chicken or lamb</li>
+            <li>1 cup yogurt</li>
+            <li>2 onions, sliced</li>
+            <li>2 tomatoes, chopped</li>
+            <li>2 tbsp biryani masala</li>
+            <li>1 tsp turmeric powder</li>
+            <li>1/2 cup fresh coriander and mint leaves</li>
+            <li>3 cups water</li>
+            <li>Salt to taste</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Rinse rice and soak for 30 minutes.</li>
+            <li>Fry onions until golden and set aside.</li>
+            <li>Cook meat with spices, tomatoes, and yogurt until tender.</li>
+            <li>Boil water, add soaked rice and salt, cook until 70% done.</li>
+            <li>Layer rice and meat mixture, sprinkle fried onions and herbs.</li>
+            <li>Cover and cook on low heat for 20 minutes (dum cooking).</li>
+            <li>Fluff up the rice and serve hot.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Carbonara Modal -->
+  <div class="modal fade" id="carbonaraModal" tabindex="-1" aria-labelledby="carbonaraModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carbonaraModalLabel">Carbonara Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>400g spaghetti</li>
+            <li>150g pancetta or bacon</li>
+            <li>3 eggs</li>
+            <li>1 cup grated Parmesan cheese</li>
+            <li>2 cloves garlic, minced</li>
+            <li>Salt and pepper to taste</li>
+            <li>2 tbsp olive oil</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Cook spaghetti until al dente.</li>
+            <li>Fry pancetta and garlic in olive oil until crisp.</li>
+            <li>Beat eggs with cheese, salt, and pepper.</li>
+            <li>Drain pasta and quickly mix with pancetta and egg mixture off heat.</li>
+            <li>Serve immediately with extra Parmesan.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Fried Chicken Modal -->
+  <div class="modal fade" id="friedChickenModal" tabindex="-1" aria-labelledby="friedChickenModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="friedChickenModalLabel">Fried Chicken Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>8 pieces chicken (drumsticks or thighs)</li>
+            <li>2 cups buttermilk</li>
+            <li>2 cups all-purpose flour</li>
+            <li>1 tbsp paprika</li>
+            <li>1 tsp garlic powder</li>
+            <li>Salt and pepper to taste</li>
+            <li>Vegetable oil for frying</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Marinate chicken in buttermilk for at least 2 hours or overnight.</li>
+            <li>Mix flour, paprika, garlic powder, salt, and pepper in a bowl.</li>
+            <li>Coat the chicken pieces in the flour mixture, shaking off excess.</li>
+            <li>Heat oil in a deep pan to 350°F (175°C).</li>
+            <li>Fry chicken pieces in batches until golden brown and cooked through (about 12-15 minutes).</li>
+            <li>Drain on paper towels and serve hot.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="pancitModal" tabindex="-1" aria-labelledby="pancitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pancitModalLabel">Pancit Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>200g bihon (rice noodles)</li>
+            <li>1 cup sliced pork or chicken</li>
+            <li>1 cup sliced cabbage</li>
+            <li>1/2 cup sliced carrots</li>
+            <li>1/2 cup green beans</li>
+            <li>1 onion, chopped</li>
+            <li>3 cloves garlic, minced</li>
+            <li>1/4 cup soy sauce</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Soak noodles in water for 10 minutes and drain.</li>
+            <li>Sauté garlic and onion, then add meat and cook thoroughly.</li>
+            <li>Add vegetables and stir-fry until tender.</li>
+            <li>Pour in soy sauce, add noodles, and mix well.</li>
+            <li>Cook until noodles are soft and well coated.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="adoboModal" tabindex="-1" aria-labelledby="adoboModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="adoboModalLabel">Adobo Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>1 kg chicken or pork</li>
+            <li>1/2 cup soy sauce</li>
+            <li>1/2 cup vinegar</li>
+            <li>1 onion, chopped</li>
+            <li>4 cloves garlic, minced</li>
+            <li>2 bay leaves</li>
+            <li>1 tsp peppercorns</li>
+            <li>Salt to taste</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Sauté garlic and onion until fragrant.</li>
+            <li>Add meat and cook until lightly browned.</li>
+            <li>Pour in soy sauce and vinegar, add bay leaves and peppercorns.</li>
+            <li>Simmer until meat is tender and sauce is reduced.</li>
+            <li>Adjust seasoning as needed and serve with rice.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="sinigangModal" tabindex="-1" aria-labelledby="sinigangModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sinigangModalLabel">Sinigang Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>500g pork belly or ribs</li>
+            <li>1 packet sinigang mix (tamarind)</li>
+            <li>1 tomato, quartered</li>
+            <li>1 onion, quartered</li>
+            <li>1 cup radish slices</li>
+            <li>1 cup eggplant slices</li>
+            <li>1 cup string beans</li>
+            <li>1 cup water spinach (kangkong)</li>
+            <li>6 cups water</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Boil pork with onions and tomatoes until tender.</li>
+            <li>Add sinigang mix and vegetables (except kangkong).</li>
+            <li>Simmer until vegetables are cooked.</li>
+            <li>Add kangkong last, simmer for 2 minutes, then serve hot.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="kareKareModal" tabindex="-1" aria-labelledby="kareKareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="kareKareModalLabel">Kare-Kare Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>500g oxtail or beef shank</li>
+            <li>1 banana blossom (optional)</li>
+            <li>1 bundle string beans, cut into 2-inch pieces</li>
+            <li>1 eggplant, sliced</li>
+            <li>1 banana heart, sliced (optional)</li>
+            <li>1/2 cup peanut butter</li>
+            <li>1/4 cup ground rice or rice flour</li>
+            <li>3 cloves garlic, minced</li>
+            <li>1 onion, chopped</li>
+            <li>Salt and fish sauce to taste</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Boil oxtail or beef until tender, set aside broth.</li>
+            <li>Sauté garlic and onion, then add meat and peanut butter.</li>
+            <li>Pour in broth and bring to a boil.</li>
+            <li>Add rice flour dissolved in water to thicken sauce.</li>
+            <li>Add vegetables and cook until just tender.</li>
+            <li>Serve hot with bagoong (shrimp paste) on the side.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="lumpiaModal" tabindex="-1" aria-labelledby="lumpiaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="lumpiaModalLabel">Lumpia Recipe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>500g ground pork or beef</li>
+            <li>1 cup chopped carrots</li>
+            <li>1 cup chopped onions</li>
+            <li>1 cup chopped green onions</li>
+            <li>1 egg</li>
+            <li>1 tbsp soy sauce</li>
+            <li>Salt and pepper to taste</li>
+            <li>Lumpia wrappers</li>
+            <li>Oil for frying</li>
+          </ul>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li>Combine all filling ingredients in a bowl and mix well.</li>
+            <li>Place 1 tbsp of filling on a wrapper and roll tightly, sealing the edge with water.</li>
+            <li>Heat oil in a pan and fry lumpia until golden brown.</li>
+            <li>Drain on paper towels and serve with sweet chili sauce or vinegar.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+
+    <!-- Footer -->
+    <footer class="footer text-white bg-dark mt-5">
+        <div class="container text-center py-3">
+          <p>&copy; <span id="year"></span> Foodie Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

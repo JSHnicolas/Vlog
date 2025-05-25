@@ -1,0 +1,71 @@
+/* Navbar brand styling */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Body setup with a fixed background */
+  body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set height to 100% of the viewport */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Background blur setup */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.jpg'); /* Use the same background as others */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(3px);
+    z-index: -1;
+  }
+  
+  /* Ensuring content stays visible */
+  .card, .container, .footer {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Card style */
+  .card {
+    border-radius: 15px;
+    background-color: #ffffffdd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Optional hover effect for navbar links */
+  .navbar a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Footer styling */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212529;
+    z-index: 1030;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  

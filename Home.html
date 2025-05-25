@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JavaScript (for navbar toggle and carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Burger Ka Sakin -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold" href="#">Foodie</a>
+    
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Nav links + buttons -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item d-flex flex-column flex-lg-row align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0">
+              <a href="login.html" class="btn btn-outline-primary btn-sm">Log In</a>
+              <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+    
+
+      <!-- Carousel -->
+      <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image1.jpg" class="d-block w-100" alt="Food Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="image2.jpg" class="d-block w-100" alt="Food Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="image3.jpg" class="d-block w-100" alt="Food Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="image4.jpg" class="d-block w-100" alt="Food Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="image5.jpg" class="d-block w-100" alt="Food Image 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      
+       <!-- Cards -->
+
+       <div class="recipe-cards">
+        <div class="row mt-4 justify-content-center">
+
+      
+          <!-- Biryani Rice Card -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card">
+              <img src="dish1.jpg" class="card-img-top" alt="Biryani Rice">
+              <div class="card-body">
+                <h5 class="card-title">Biryani Rice</h5>
+                <p class="card-text">Aromatic and flavorful rice cooked with spices, meat, and herbs.</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#biryaniModal">
+                  View Recipe
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Carbonara Card -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card">
+              <img src="dish2.jpg" class="card-img-top" alt="Carbonara">
+              <div class="card-body">
+                <h5 class="card-title">Carbonara</h5>
+                <p class="card-text">Creamy Italian pasta with eggs, cheese, pancetta, and pepper.</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carbonaraModal">
+                  View Recipe
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Fried Chicken Card -->
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card">
+              <img src="dish3.jpg" class="card-img-top" alt="Fried Chicken">
+              <div class="card-body">
+                <h5 class="card-title">Fried Chicken</h5>
+                <p class="card-text">Crispy and juicy fried chicken with a golden brown crust and flavorful seasoning.</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#friedChickenModal">
+                  View Recipe
+                </button>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      
+  
+
+</div>
+
+
+<!-- Biryani Rice Modal -->
+<div class="modal fade" id="biryaniModal" tabindex="-1" aria-labelledby="biryaniModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="biryaniModalLabel">Biryani Rice Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>2 cups basmati rice</li>
+          <li>500g chicken or lamb</li>
+          <li>1 cup yogurt</li>
+          <li>2 onions, sliced</li>
+          <li>2 tomatoes, chopped</li>
+          <li>2 tbsp biryani masala</li>
+          <li>1 tsp turmeric powder</li>
+          <li>1/2 cup fresh coriander and mint leaves</li>
+          <li>3 cups water</li>
+          <li>Salt to taste</li>
+        </ul>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+          <li>Rinse rice and soak for 30 minutes.</li>
+          <li>Fry onions until golden and set aside.</li>
+          <li>Cook meat with spices, tomatoes, and yogurt until tender.</li>
+          <li>Boil water, add soaked rice and salt, cook until 70% done.</li>
+          <li>Layer rice and meat mixture, sprinkle fried onions and herbs.</li>
+          <li>Cover and cook on low heat for 20 minutes (dum cooking).</li>
+          <li>Fluff up the rice and serve hot.</li>
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Carbonara Modal -->
+<div class="modal fade" id="carbonaraModal" tabindex="-1" aria-labelledby="carbonaraModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="carbonaraModalLabel">Carbonara Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>400g spaghetti</li>
+          <li>150g pancetta or bacon</li>
+          <li>3 eggs</li>
+          <li>1 cup grated Parmesan cheese</li>
+          <li>2 cloves garlic, minced</li>
+          <li>Salt and pepper to taste</li>
+          <li>2 tbsp olive oil</li>
+        </ul>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+          <li>Cook spaghetti until al dente.</li>
+          <li>Fry pancetta and garlic in olive oil until crisp.</li>
+          <li>Beat eggs with cheese, salt, and pepper.</li>
+          <li>Drain pasta and quickly mix with pancetta and egg mixture off heat.</li>
+          <li>Serve immediately with extra Parmesan.</li>
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fried Chicken Modal -->
+<div class="modal fade" id="friedChickenModal" tabindex="-1" aria-labelledby="friedChickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="friedChickenModalLabel">Fried Chicken Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>8 pieces chicken (drumsticks or thighs)</li>
+          <li>2 cups buttermilk</li>
+          <li>2 cups all-purpose flour</li>
+          <li>1 tbsp paprika</li>
+          <li>1 tsp garlic powder</li>
+          <li>Salt and pepper to taste</li>
+          <li>Vegetable oil for frying</li>
+        </ul>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+          <li>Marinate chicken in buttermilk for at least 2 hours or overnight.</li>
+          <li>Mix flour, paprika, garlic powder, salt, and pepper in a bowl.</li>
+          <li>Coat the chicken pieces in the flour mixture, shaking off excess.</li>
+          <li>Heat oil in a deep pan to 350°F (175°C).</li>
+          <li>Fry chicken pieces in batches until golden brown and cooked through (about 12-15 minutes).</li>
+          <li>Drain on paper towels and serve hot.</li>
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+      <section id="about" class="container my-5 py-5">
+        <h2 class="text-center mb-4 display-5 fw-bold text-primary">About Us</h2>
+      
+        <!-- History -->
+        <div class="card bg-dark text-white shadow mb-4 p-4">
+          <h4 class="text-info">History</h4>
+          <p>Our culinary journey began in a small family kitchen where recipes were passed down through generations, each one seasoned with tradition and love. What started as a simple hobby of documenting home-cooked meals quickly turned into a passion for sharing stories through food.</p>
+          <p>In 2020, we launched our blog to create a space where home cooks of all skill levels could come together, learn, and get inspired. As our community grew, so did our mission to showcase the diversity of global flavors, celebrate cultural heritage, and make cooking both enjoyable and accessible.</p>
+          <p>From humble beginnings to becoming a go-to resource for delicious and dependable recipes, our history is rooted in authenticity, community, and the joy of every shared meal.</p>
+        </div>
+      
+        <!-- Core Values -->
+        <h4 class="text-primary text-center display-5 fw-bold mb-4">Core Values</h4>
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-md-6 col-lg">
+            <div class="card bg-dark text-white shadow h-100 p-4">
+              <h6 class="text-info">Passion for Quality</h6>
+              <p>We deliver the best ingredients and flavors. Quality is at the heart of everything we create.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg">
+            <div class="card bg-dark text-white shadow h-100 p-4">
+              <h6 class="text-info">Sustainability</h6>
+              <p>We reduce waste, choose seasonal ingredients, and support ethical sourcing in all we do.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg">
+            <div class="card bg-dark text-white shadow h-100 p-4">
+              <h6 class="text-info">Creativity & Innovation</h6>
+              <p>We encourage bold flavor exploration and unique twists on traditional cooking.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg">
+            <div class="card bg-dark text-white shadow h-100 p-4">
+              <h6 class="text-info">Community</h6>
+              <p>We create a space for sharing stories, learning, and celebrating through food together.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg">
+            <div class="card bg-dark text-white shadow h-100 p-4">
+              <h6 class="text-info">Integrity</h6>
+              <p>We’re open, honest, and dependable from our ingredients to our recipes and beyond.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Philosophy -->
+        <div class="card bg-dark text-white shadow mt-5 mb-4 p-4">
+          <h4 class="text-info">Philosophy</h4>
+          <p>We believe that food is more than just sustenance it's a way to connect, express creativity, and celebrate life. Our cooking philosophy is rooted in the idea that every dish tells a story, and anyone can become a storyteller in the kitchen. We aim to make the cooking experience enjoyable, approachable, and meaningful for everyone.</p>
+        </div>
+      
+        <!-- Mission -->
+        <div class="card bg-dark text-white shadow mb-4 p-4">
+          <h4 class="text-info">Mission</h4>
+          <p>Our mission is to inspire and empower home cooks by sharing easy-to-follow recipes, cooking tips, and creative ideas. We aim to foster a community that celebrates food, sustainability, and cultural diversity while making cooking enjoyable and accessible for all.</p>
+        </div>
+      
+        <!-- Vision -->
+        <div class="card bg-dark text-white shadow mb-4 p-4">
+          <h4 class="text-info">Vision</h4>
+          <p>To become a trusted source of culinary inspiration, where people of all backgrounds can connect, learn, and explore the world of food, fostering a more sustainable and flavorful future for everyone.</p>
+        </div>
+      </section>
+    
+       <!-- Contact -->
+       <section id="contact" class="container my-5 py-5">
+        <h2 class="text-center mb-4 display-5 fw-bold text-primary">Contact Us</h2>
+      
+        <div class="row justify-content-center mb-4">
+          <!-- Contact Details -->
+          <div class="col-md-6 mb-3">
+            <div class="card bg-dark text-white shadow p-4 h-100">
+              <h4 class="text-info">Contact Details</h4>
+              <p><strong>Owner's Name:</strong> Jhon Stephen Nicolas</p>
+              <p><strong>Company Name:</strong> Foodie Inc.</p>
+              <p><strong>Email:</strong> contact@foodie.com</p>
+              <p><strong>Contact Number:</strong> +63 921 645 6949</p>
+              <p><strong>Location:</strong> SM Fairview third floor (Main Branch)</p>
+            </div>
+          </div>
+        
+          <!-- Branches -->
+          <div class="col-md-6 mb-3">
+            <div class="card bg-dark text-white shadow p-4 h-100">
+              <h4 class="text-info">Branches</h4>
+              <ul class="mb-0 ps-3">
+                <li>SM FairView</li>
+                <li>Litex</li>
+                <li>Philcoa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      
+        <!-- Map -->
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="ratio ratio-16x9 shadow rounded">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019637480054!2d121.058495!3d14.733691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33b5bfb12f7f3f0d%3A0x63b7d617459604e0!2sSM%20City%20Fairview%2C%20Quirino%20Highway%2C%20Quezon%20City%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1670472651976!5m2!1sen!2sus" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Content Sections of your page -->
+<section id="about">
+  <!-- Your About content goes here -->
+</section>
+
+<section id="contact">
+  <!-- Your Contact content goes here -->
+</section>
+
+<!-- Footer Section -->
+<footer class="footer text-white">
+  <div class="container text-center py-3">
+    <p>&copy; <span id="year"></span> Foodie Inc. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+</body>
+</html>
